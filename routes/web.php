@@ -45,3 +45,10 @@ Route::post('admin/category/edit/{id}',[CategoryController::class,'update']);
 
 Route::get('admin/category/delete/{id}',[CategoryController::class,'destroy']);
 
+Route::get('unactive/category/{id}',[CategoryController::class,'unactive']);
+
+Route::get('active/category/{id}',[CategoryController::class,'active']);
+
+
+
+

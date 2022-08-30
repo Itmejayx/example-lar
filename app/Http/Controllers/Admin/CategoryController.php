@@ -95,4 +95,16 @@ class CategoryController extends Controller
         Category::where('id',$id)->delete();
         return redirect()->back();
     }
+
+    public function unactive($id)
+    {
+        // dd(1);
+        DB::table('category')->where('id',$id)->update(['category_status' => 1 ]);
+        return redirect()->back()->with('success',__('Không kích hoạt danh mục'));
+    }
+    public function active($id)
+    {
+        DB::table('category')->where('id',$id)->update(['category_status' => 0 ]);
+        return redirect()->back()->with('success',__('Kích hoạt danh mục'));
+    }
 }
