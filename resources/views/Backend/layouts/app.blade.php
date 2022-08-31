@@ -268,9 +268,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
 
                         <li class="sub-menu">
-                            <a href="{{url('product')}}">
+                            <a href="{{url('admin/category')}}">
                                 <i class="fa fa-book"></i>
-                                <span>Product</span>
+                                <span>Product Category</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="{{url('admin/brand')}}">
+                                <i class="fa fa-book"></i>
+                                <span>Brand</span>
                             </a>
                         </li>
 

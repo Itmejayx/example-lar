@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -49,6 +50,22 @@ Route::get('unactive/category/{id}',[CategoryController::class,'unactive']);
 
 Route::get('active/category/{id}',[CategoryController::class,'active']);
 
+
+Route::get('admin/brand',[BrandController::class,'index']);
+
+Route::get('admin/brand/add',[BrandController::class,'create']);
+
+Route::post('admin/brand/add',[BrandController::class,'store']);
+
+Route::get('admin/brand/edit/{id}',[BrandController::class,'edit']);
+
+Route::post('admin/brand/edit/{id}',[BrandController::class,'update']);
+
+Route::get('admin/brand/delete/{id}',[BrandController::class,'destroy']);
+
+Route::get('unactive/brand/{id}',[BrandController::class,'unactive']);
+
+Route::get('active/brand/{id}',[BrandController::class,'active']);
 
 
 
